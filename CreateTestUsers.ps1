@@ -4,7 +4,7 @@
 
     Author:
         Thomas Wimprine
-        twimprin@xula.edu
+        thomas@thomaswimprine.com
 
     Creation Date:
         October 3, 2018
