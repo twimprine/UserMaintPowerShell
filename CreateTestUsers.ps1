@@ -86,7 +86,7 @@ do {
     $Counter++
 
     # Populate our variables from functon outputs
-    $XavierID               = New-employeeID
+    $CompanyID               = New-employeeID
     $GivenName              = New-GivenName
     $SurName                = New-SurName
     $Manager                = Select-Manager
@@ -96,8 +96,8 @@ do {
     $EmployeeTitle          = New-Title
     $EmployeeID             = New-employeeID
     $Login                  = $GivenName.Substring(0,1) + $SurName
-    $Email                  = $Login + "@xula.edu"
-    $UserPricipalName       = $Login + "@xavier.xula.local"
+    $Email                  = $Login + "@company.edu"
+    $UserPricipalName       = $Login + "@domain.company.local"
     $UserAccountStatus      = "CREATE"
     $PrimaryUserType        = Select-UserType
     $GroupMembership        = $PrimaryUserType
@@ -107,8 +107,8 @@ do {
         $UserObject | Add-Member -membertype NoteProperty -name "UserName" -value $Login
         $UserObject | Add-Member -MemberType NoteProperty -Name "FirstName" -Value $GivenName
         $UserObject | Add-Member -MemberType NoteProperty -Name "LastName" -Value $SurName
-        $UserObject | Add-Member -MemberType NoteProperty -Name "XavierID" -Value $EmployeeID
-        $UserObject | Add-Member -MemberType NoteProperty -Name "XavierEmailAddress" -Value $Email
+        $UserObject | Add-Member -MemberType NoteProperty -Name "CompanyID" -Value $EmployeeID
+        $UserObject | Add-Member -MemberType NoteProperty -Name "CompanyEmailAddress" -Value $Email
         $UserObject | Add-Member -MemberType NoteProperty -Name "UserPrincipalName" -Value $UserPricipalName
         $UserObject | Add-Member -MemberType NoteProperty -Name "UserAccountStatus" -Value $UserAccountStatus
         $UserObject | Add-Member -MemberType NoteProperty -Name "PrimaryUserType" -Value $PrimaryUserType
